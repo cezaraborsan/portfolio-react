@@ -118,7 +118,12 @@ const Project = ({
                   }`}
                   onClick={toggleDetails}
                 >
-                  {showDetails && <FontAwesomeIcon icon={faXmark} />}
+                  {showDetails && (
+                    <FontAwesomeIcon
+                      icon={faXmark}
+                      className="close-detail-icon"
+                    />
+                  )}
                 </button>
               </div>
             </div>

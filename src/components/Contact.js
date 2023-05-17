@@ -15,9 +15,11 @@ function Contact() {
   });
 
   const scrollToTop = () => {
-    scroll.scrollToTop();
+    scroll.scrollToTop({
+      duration: 100,
+      smooth: true,
+    });
   };
-
   return (
     <section ref={targetRef} className="contact-section translate-section">
       <h2>Contact</h2>
