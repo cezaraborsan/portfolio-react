@@ -35,7 +35,7 @@ h1 {
   font-size: 4rem;
   font-weight: 800;
   color: rgba(225, 225, 225, 0.01);
-  background: url("C:\Users\Ce\Desktop\portfolio-react\public\h1_bg.jpg");
+  background: url("../public/h1_bg.jpg");
   background-repeat: repeat;
   background-clip: text;
   animation: titleAnimation 30s ease-in-out infinite;
