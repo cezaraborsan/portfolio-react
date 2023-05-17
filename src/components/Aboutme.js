@@ -38,7 +38,9 @@ function Aboutme() {
         {/* The "Resume" button can be linked to your resume file or a URL where your resume is hosted. */}
         <a
           className="primary_btn"
-          href="https://cezaraborsan.github.io/Portfolio_Page/"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="/CV_Cezara_Borsan.pdf"
         >
           Resume
         </a>

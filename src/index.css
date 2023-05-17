@@ -138,7 +138,7 @@ section {
 }
 
 .project {
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 
 .card {
@@ -253,6 +253,7 @@ section {
   background-color: transparent;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
   cursor: default;
+  color: #2e2e2e;
 }
 
 .close-details-btn * {
@@ -325,7 +326,7 @@ br {
 
 .scroll-to-top-btn-container {
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .scroll-to-top-btn {
@@ -393,8 +394,27 @@ footer {
   0% {
     opacity: 0;
   }
+
+  10% {
+    opacity: 0.1;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  30% {
+    opacity: 0.3;
+  }
+
   50% {
     opacity: 0.5;
+  }
+
+  60% {
+    opacity: 0.6;
+  }
+
+  70% {
+    opacity: 0.7;
   }
   100% {
     opacity: 1;
@@ -455,19 +475,38 @@ footer {
   /* Contact me small size styles */
   .contact-content {
     flex-direction: column;
+    align-items: start;
+  }
+
+  .contact-icon {
+    font-size: 55px;
+  }
+
+  .scroll-to-top-btn {
+    width: 50px;
+    height: 72px;
+  }
+
+  .scroll-to-top-icon {
+    font-size: 1.2rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   h1 {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .hero-text {
+    font-size: 0.9rem;
     max-width: 400px;
   }
 }

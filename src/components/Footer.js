@@ -5,8 +5,8 @@ function Footer() {
 
   return (
     <footer className="copyright-footer">
-      <div className="container">
-        <p className="text-center">
+      <div>
+        <p>
           &copy; {currentYear} Cezara Borsan Portfolio. All rights reserved.
         </p>
       </div>
