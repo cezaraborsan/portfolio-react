@@ -1,13 +1,503 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+
+html {
+  scroll-behavior: smooth;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Reset styles for all elements */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  transition: 0.3s all;
+  color: #333333;
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: calc(800px - 2.4rem);
+  margin: auto;
+  height: auto;
+  position: relative;
+  padding-inline: 1.2rem;
+  min-width: 375px;
+}
+
+h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(225, 225, 225, 0.01);
+  background: url("C:\Users\Ce\Desktop\portfolio-react\public\h1_bg.jpg");
+  background-repeat: repeat;
+  background-clip: text;
+  animation: titleAnimation 30s ease-in-out infinite;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  padding-block: 1rem 1.5rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-size: 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* Loader styles */
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2e2e2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 1s ease;
+  z-index: 10000;
+}
+
+.loader-text {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: fade 3s alternate;
+}
+
+/* HERO SECTION */
+
+/* Hero section container styles */
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 540px;
+}
+
+.title-container,
+.hero-text,
+.hero-subtitle,
+.navbar {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-name: bottomToTop;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+}
+.navbar {
+  animation-delay: 3.7s;
+}
+
+.title-container {
+  animation-delay: 3.5s;
+}
+
+.hero-subtitle {
+  animation-delay: 3.4s;
+}
+
+.hero-text {
+  animation-delay: 3.2s;
+}
+
+/* PROJECTS SECTION */
+
+.display {
+  display: none;
+}
+
+.project {
+  padding-top: 1rem;
+}
+
+.card {
+  padding: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.visible-card {
+  display: flex;
+  gap: 20px;
+  padding: 1rem;
+}
+
+.card-image {
+  width: 350px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+  border-radius: 6px;
+  transform: perspective(350px) rotateY(0);
+  transition: transform 0.3s ease-in;
+}
+
+/* Hover effect for card image on bigger screens*/
+.card-image:hover {
+  transform: perspective(800px) rotateY(10deg);
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.project_technologies {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(46, 46, 46, 0.75);
+}
+
+.short-description {
+  margin-bottom: 0.5rem;
+}
+
+/* Styles for primary and secondary buttons */
+.primary_btn,
+.secondary_btn {
+  margin: 0.3rem 1rem 0 0;
+  padding: 14px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid #2e2e2e;
+  border-radius: 64px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.primary_btn {
+  background-color: #2e2e2e;
+  color: white;
+}
+
+.secondary_btn {
+  color: #333333;
+}
+
+.primary_btn:hover {
+  color: #333333;
+  background-color: white;
+}
+
+.secondary_btn:hover {
+  background-color: #2e2e2e;
+  color: white;
+  border-color: #2e2e2e;
+}
+
+.primary_btn:active {
+  background-color: #f0eded;
+}
+
+.secondary_btn:active {
+  background-color: #252525;
+}
+
+.primary_btn.inactive,
+.secondary_btn.inactive {
+  background-color: #c5c5c5;
+  border-color: #c5c5c5;
+  color: #c5c5c5;
+  cursor: not-allowed;
+}
+
+.github-icon {
+  margin-right: 0.4rem;
+  font-size: 16px;
+}
+
+.close-details-btn {
+  float: right;
+  padding: 14px 16px;
+  border: 1px solid #c3c3c3;
+  border-radius: 100%;
+  background-color: transparent;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  cursor: default;
+}
+
+.close-details-btn * {
+  font-size: 16px;
+}
+
+.project_details {
+  padding: 0 1rem 1rem 1rem;
+}
+
+.project_description {
+  margin-bottom: 1.5rem;
+}
+
+.project_description a {
+  color: blue;
+  text-decoration: underline;
+}
+
+hr {
+  border: 4px solid transparent;
+}
+
+.project-image {
+  width: 800px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.project_btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-content button {
+  padding: 16px 20px;
+}
+
+/* ABOUT ME SECTION */
+.aboutme-info p {
+  margin-bottom: 2rem;
+}
+
+br {
+  padding-bottom: 0.3rem;
+}
+/* CONTACT ME SECTION */
+
+.contact-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-icon {
+  margin-right: 1.2rem;
+  font-size: 48px;
+  transition: all 0.3s;
+}
+
+.contact-icon:hover {
+  transform: translateY(-4px);
+}
+
+.contact-links {
+  display: flex;
+  gap: 20px;
+}
+
+.scroll-to-top-btn-container {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.scroll-to-top-btn {
+  width: 58px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 28px 17px;
+  background: #2e2e2e;
+  border: 1px solid #ffeed8;
+  border-radius: 64px;
+}
+
+.scroll-to-top-icon {
+  font-size: 1.5rem;
+  color: white;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scroll-to-top-btn:hover .scroll-to-top-icon {
+  transform: translateY(-5px);
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Intersection Observer on section to slide right when into view */
+
+.translate-section {
+  transform: translateX(-70px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animations */
+
+/* Title animation, background image moving */
+
+@keyframes titleAnimation {
+  0%,
+  100% {
+    background-position: left top;
+  }
+  25% {
+    background-position: right bottom;
+  }
+  50% {
+    background-position: left bottom;
+  }
+  75% {
+    background-position: right top;
+  }
+}
+
+/* Loader fade animation */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Hero text translate animation when page is loaded */
+
+@keyframes bottomToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive styles for smaller screens */
+
+@media screen and (max-width: 750px) {
+  /* Adjusted padding for smaller buttons */
+  .primary_btn,
+  .secondary_btn,
+  .close-details-btn {
+    padding: 10px 14px;
+  }
+
+  /* Adjusted padding for !!button within card content */
+  .card-content button {
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 700px) {
+  .card {
+    max-width: max-content;
+    padding: 0;
+  }
+
+  .visible-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.8rem;
+  }
+
+  /* Hide short description on smaller screens */
+  .short-description {
+    display: none;
+  }
+
+  /* Remove hover effect on card image for smaller screens */
+  .card-image:hover {
+    transform: none;
+  }
+
+  /* Contact me small size styles */
+  .contact-content {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text {
+    max-width: 400px;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  .hero-text {
+    max-width: 480px;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 993px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero-text {
+    max-width: 540px;
+  }
 }

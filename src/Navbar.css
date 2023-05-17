@@ -1,0 +1,147 @@
+/* Navbar */
+
+/* Navbar container styles */
+.navbar-container {
+  text-align: center;
+  position: fixed;
+  padding-block: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 375px;
+  width: calc(800px - 2.4rem);
+  max-width: 100%;
+  margin: auto;
+  height: auto;
+  padding-inline: 1.2rem;
+}
+
+/* Navbar logo styles */
+.navbar-logo {
+  font-weight: bold;
+  font-size: 24px;
+  color: #535151;
+  text-decoration: none;
+}
+
+/* Navbar links container styles */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Navbar link styles */
+.navbar-link {
+  position: relative;
+  font-size: 18px;
+  color: #464242;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Navbar link hover styles */
+.navbar-link::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #333;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.navbar-link:hover::before,
+.navbar-link:hover:hover::after {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.navbar-link:hover::after {
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: visibility 0s linear 0.3s, transform 0.3s ease-in-out;
+}
+
+/* Hamburger icon styles */
+.hamburger-icon {
+  display: none;
+  cursor: pointer;
+  color: black;
+}
+
+/* Mobile menu styles */
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100vh;
+  background: #f2f2f2;
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 3rem 1.5rem;
+}
+
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.menu .close-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
+
+/* Mobile menu overlay visibility */
+.menu-overlay.open {
+  display: block;
+}
+
+.navbar-links.active .menu-overlay {
+  display: none;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  /* Hide navbar links on smaller screens */
+  .navbar-links {
+    display: none;
+  }
+
+  /* Display hamburger icon on smaller screens */
+  .hamburger-icon {
+    display: block;
+  }
+
+  .menu.open {
+    transform: translateX(0%);
+  }
+}
