@@ -36,7 +36,12 @@ function Aboutme() {
           projects.
         </p>
         {/* The "Resume" button can be linked to your resume file or a URL where your resume is hosted. */}
-        <a className=" primary_btn">Resume</a>
+        <a
+          className="primary_btn"
+          href="https://cezaraborsan.github.io/Portfolio_Page/"
+        >
+          Resume
+        </a>
       </div>
     </section>
   );

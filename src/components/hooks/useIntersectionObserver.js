@@ -8,18 +8,20 @@ const useIntersectionObserver = (callback, options) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           callback(entry.target);
-          observer.unobserve(entry.target);
+          observer.unobserve(targetRef.current);
         }
       });
     }, options);
 
-    if (targetRef.current) {
-      observer.observe(targetRef.current);
+    const currentRef = targetRef.current;
+
+    if (currentRef) {
+      observer.observe(currentRef);
     }
 
     return () => {
-      if (targetRef.current) {
-        observer.unobserve(targetRef.current);
+      if (currentRef) {
+        observer.unobserve(currentRef);
       }
     };
   }, [callback, options]);

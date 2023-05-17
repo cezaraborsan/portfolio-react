@@ -237,7 +237,6 @@ section {
 .secondary_btn.inactive {
   background-color: #c5c5c5;
   border-color: #c5c5c5;
-  color: #c5c5c5;
   cursor: not-allowed;
 }
 
