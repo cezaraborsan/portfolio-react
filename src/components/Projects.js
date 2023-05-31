@@ -84,6 +84,20 @@ const Projects = () => {
       codeLink: "https://github.com/cezaraborsan/The_Newsletter",
       isActive: false,
     },
+
+    {
+      id: 6,
+      photo: "./movie-app-react.jpg",
+      title: "Movie App with React",
+      description:
+        "Introducing FILM101 V2, an exciting movie application built with React. As a fellow movie enthusiast, I couldn't resist the opportunity to reimagine my existing movie project, originally created with pure JavaScript, using the power of React. This allowed me to dive into a fresh approach while refining my skills in this popular JavaScript framework. <hr>  FILM101 retains the core essence of its JavaScript counterpart found in my portfolio. It remains a comprehensive platform for all movie and TV show lovers, harnessing the incredible TMDB API to deliver an outstanding movie browsing experience. Just like before, FILM101 empowers users to search for their beloved movies and TV shows, uncovering a vast collection of cinematic treasures. <hr> With its sleek and modern design, FILM101 offers an intuitive interface that guides users on an exciting journey of exploring movies. Whether you're on the hunt for a specific title or eager to discover new gems, the application's robust search functionality and carefully curated categories have got you covered. You'll find yourself effortlessly immersing into the world of cinema, discovering captivating stories with just a few clicks.",
+      technologies: "REACT",
+      shortDescription:
+        "Film101, reborn in React, keeps the spirit of its JavaScript predecessor while embracing the power of React's features. ",
+      demoLink: "https://film101-movie-app.netlify.app/",
+      codeLink: "https://github.com/cezaraborsan/Film101_Movie_App_React",
+      isActive: true,
+    },
   ];
 
   return (

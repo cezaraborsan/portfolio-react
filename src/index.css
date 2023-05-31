@@ -158,7 +158,7 @@ section {
 
 .card-image {
   width: 350px;
-  height: auto;
+  height: 200px;
   display: block;
   max-width: 100%;
   border-radius: 6px;
