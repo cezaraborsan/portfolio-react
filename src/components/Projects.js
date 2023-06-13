@@ -98,6 +98,19 @@ const Projects = () => {
       codeLink: "https://github.com/cezaraborsan/Film101_Movie_App_React",
       isActive: true,
     },
+    {
+      id: 7,
+      photo: "./restaurant-project.jpg",
+      title: "Restaurant Landing Page",
+      description:
+        'This project is a responsive landing page for a Japanese restaurant, developed using React. The design of the landing page was inspired by a project available in the Figma Community, you can check it out <a href="https://www.figma.com/community/file/1200799657217214030/Food-Website" target="_blank" rel="noopener noreferrer" className="figmaLink">here</a>. I created this project to improve my CSS skills and gain hands-on experience with React development. While recreating the original design, I added my own unique style and included extra features to make it even better. <hr> One of the great aspects of this project is its flexibility. It can be easily adapted for other restaurants or different topics altogether. With some modifications to the content and styling, this landing page can be transformed to suit the needs of various businesses or interests. Whether it is a coffee shop, a boutique store, or a personal portfolio, the structure and components of this project provide a solid foundation that can be customized to fit different purposes. ',
+      technologies: "REACT",
+      shortDescription:
+        "Flexible, responsive landing page for a Japanese restaurant, built with React. Easily customizable for any business or topic. ",
+      demoLink: "https://miyabi-house-restaurant.netlify.app/",
+      codeLink: "https://github.com/cezaraborsan/restaurant-website",
+      isActive: true,
+    },
   ];
 
   return (
