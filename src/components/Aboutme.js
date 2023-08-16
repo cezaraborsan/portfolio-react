@@ -39,7 +39,7 @@ function Aboutme() {
           className="primary_btn"
           target="_blank"
           rel="noopener noreferrer"
-          href="/cv-cezaraborsan-1"
+          href="/cv-cezaraborsan-2.pdf"
         >
           Resume
         </a>
