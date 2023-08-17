@@ -15,12 +15,12 @@ function Aboutme() {
       <div className="aboutme-info">
         <h2 className="section-title">About me</h2>
         <p className="info-text">
-          Hello! I'm Cezara, a passionate Junior Front-End Developer with a
-          strong background in engineering. My journey in programming came as a
-          natural progression of my long-standing passion for captivating
-          website interfaces and engaging applications. As I delved deeper into
-          the world of technology, I realized that I could blend my technical
-          skills with my creative mindset to create remarkable user experiences.
+          Hello! I'm Cezara, a passionate Front-End Developer with a strong
+          background in engineering. My journey in programming came as a natural
+          progression of my long-standing passion for captivating website
+          interfaces and engaging applications. As I delved deeper into the
+          world of technology, I realized that I could blend my technical skills
+          with my creative mindset to create remarkable user experiences.
           <br />
           <br />
           As an ambitious individual, I bring a unique perspective to my work,

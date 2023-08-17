@@ -13,12 +13,12 @@ function Hero() {
         </div>
 
         {/* Hero subtitle */}
-        <h2 className="hero-subtitle">Aspiring Front-End Developer</h2>
+        <h2 className="hero-subtitle">Front-End Developer</h2>
 
         {/* Hero text */}
         <p className="hero-text">
-          Aspiring web developer with a strong passion for creating innovative
-          and functional web applications. Dedicated to expanding skills and
+          Front-End Developer with a strong passion for creating innovative and
+          functional web applications. Dedicated to expanding skills and
           knowledge in HTML, CSS, and JavaScript. Ready to create exceptional
           user experiences.
         </p>
