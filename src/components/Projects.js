@@ -111,6 +111,19 @@ const Projects = () => {
       codeLink: "https://github.com/cezaraborsan/restaurant-website",
       isActive: true,
     },
+    {
+      id: 8,
+      photo: "./tasks-img.jpg",
+      title: "Yesterday's Task",
+      description:
+        "I created this React app as a way to refine my development skills, particularly in React. The application provides a user-friendly interface for managing tasks. I aimed for a clean and straightforward design, inspired by a newspaper pallet color, to ensure an intuitive user experience. The layout prioritizes task titles and descriptions, making it easy to input, edit, and mark tasks as complete. This project allowed me to practice React concepts while also exploring how to create an organized and visually appealing design.",
+      technologies: "REACT",
+      shortDescription:
+        "Manage, edit, complete, and delete your tasks with a clean and user-friendly interface.",
+      demoLink: "https://yesterdays-tasks.netlify.app/",
+      codeLink: "https://github.com/cezaraborsan/Yesterdays-Tasks",
+      isActive: true,
+    },
   ];
 
   return (
